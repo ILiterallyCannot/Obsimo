@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset=utf-8>
+<title>Obsimo App</title>
+<meta name=description content="Obsimo App by JAMK">
+<meta name=author content=JAMK>
+<link rel=stylesheet href=css/Obsimo.css>
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel=stylesheet>
+<script src=https://code.jquery.com/jquery-3.3.1.js integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin=anonymous></script>
+<script src=js/jquery.transit.min.js type=text/javascript></script>
+<script src=js/js.cookie.js type=text/javascript></script>
+<script src=js/Obsimo.js text/javascript></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130143545-1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','UA-130143545-1');</script>
+</head>
+
+<body>
+    <div id=usepc>
+<div class=mobiledetected>
+<h1 id=font1>Hi! It seems you are using a mobile device.</h1>
+<h2 id=font1>We recommend you use a PC for this app!</h2>
+<h3 id=font1>This app is not yet ready for mobile use and therefore it will be disabled on mobile devices for now. We are sorry!</h3>
+</div>
+
+</div>
+            <div class=gdpr id=h1>
+<h1>Hi! It seems this is your first visit.</h1>
+<h2>We care about your privacy!</h2>
+<p>We use cookies on this site to enhance user experience. We keep track of our users selection for the purposes of the Obsimo survery app. The cookies are used to track the courses that are chosen and to further develop the course plans at Jyäskylä University of Applied Science.</p>
+<input type=button class="mainbtn gdprconfirm" id=gdprconfirm value=OK!>
+<input type=button class="mainbtn gdprdeny" id=gdprdeny value="No thanks.">
+</div>
+    <div id=guest>
+<h1 id=h1>That's fine. You can still visit our app as a guest!</h1>
+<form action=table.html>
+<input type=submit class="mainbtn guest2" id=guest2 value="Enter Visitor section" disabled=disabled>
+</form>
+<p id=h1>Note: A cookie is still used in the visior app to show the courses you selected on another table. You won't be able to save what you select, send it to us, or add any courses.</p>
+</div>
+    <div class=center>
+<h1 id=h1>Who are you?</h1><br>
+<input type=button id=stud class="mainbtn student" value="a Student">
+<input type=button id=comp class="mainbtn company" value="a Company">
+</div>
+
+    <div class="stud">
+        <h1>Welcome, student!</h1>
+        <input type="button" class="loginstud" value="Login" disabled="disabled">
+        <input type="button" class="regstud" value="Register" disabled="disabled">
+        <br>
+        <form action="table.html">
+            <input type="submit" id="guest-s" class="guest" value="I'm just visiting" disabled="disabled">
+        </form>
+    </div>
+    <!--  <div class="comp">
+        <h1>Welcome, company!</h1>
+            <input id="Nimi" type="text" name="Nimi" placeholder="Nimi">
+            <input id="Toimiala" type="text" name="Toimiala" placeholder="Toimiala"><br>
+        <button type="submit" class="save">Save</button><button type="submit" class="login">
+                            I have an account
+                        </button>
+
+    </div>-->
+    <div class=comp id=h1>
+<form role=form data-toggle=validator method=POST action=table.html>
+<div class="form-group col-md-6 col-md-offset-1">
+<h1 id=font1>Welcome, company!</h1>
+<h2 id=font1>If this is your first visit, tell us a little about yourself!</h2>
+<h3 id=font1>This IS NOT a login NOR registration, just a simple questionnaire for your companys name. It looks cool, we promise!</h3>
+<input id=Nimi type=text class=nimi id=compnimi name=Nimi placeholder="Yrityksen Nimi/Company Name" disabled=disabled>
+<input id=Toimiala type=text class=toimiala id=comptoimiala name=Toimiala placeholder="Toimiala/Field or Department" disabled=disabled>
+<input type=submit class="mainbtn save" id=compsave value=Save disabled=disabled>
+</div>
+<input type=hidden name=_token value="{{ csrf_token() }}">
+</form>
+</div>
+    <form role="form" method="get" action="/loginkayttaja">
+        <div class="loginform">
+            <h1>Please login!</h1>
+            <input id="Username" type="text" class="uname" name="Username" placeholder="Username" disabled="disabled">
+            <input id="Password" type="password" class="pass" name="password" placeholder="password" disabled="disabled">
+            <input type="button" class="loginbtn" value="Login" disabled="disabled">
+            <input type="button" class="register" value="I'll make an account'" disabled="disabled">
+        </div>
+    </form>
+    
+    <form action="action_page.php">
+
+</form>
+    <div>
+<input type=button class="mainbtn back" id=backup value="Back up!" disabled=disabled>
+<input type=button class="mainbtn gdprback" id=backup value="Back up!" disabled=disabled>
+</div>
+    <div>
+        <input type="button" class="ups" id="up" value=&#65085; disabled="disabled">
+    </div>
+    <div>
+        <input type="button" class="upc" id="up" value=&#65085; disabled="disabled">
+    </div>
+    <script>
+    </script>
+
+</body>
+
+</html>
